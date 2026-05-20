@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tournament-container">
+        <div class="game-card">
+            <h1>🥊 ROCK · PAPER · SCISSORS 🥊</h1>
+            <div class="tournament-badge">🏆 TOURNAMENT MODE 🏆</div>
+            
+            <!-- Scoreboard -->
+            <div class="scoreboard">
+                <div class="player-score-card">
+                    <div class="avatar">👊 YOU</div>
+                    <div class="score-number" id="playerScore">0</div>
+                    <div class="wins-label">Wins</div>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="computer-score-card">
+                    <div class="avatar">🤖 CPU</div>
+                    <div class="score-number" id="computerScore">0</div>
+                    <div class="wins-label">Wins</div>
+                </div>
+            </div>
+            
+            <!-- Tournament progress -->
+            <div class="tournament-progress">
+                <div class="progress-label">🏅 TOURNAMENT PROGRESS (First to 3 wins) 🏅</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                </div>
+                <div class="round-info" id="roundInfo">Round 0 / 5</div>
+            </div>
+            
+            <!-- Current round result -->
+            <div class="battle-area" id="battleArea">
+                <div class="choice-display">
+                    <div class="choice-box player-choice" id="playerChoiceDisplay">
+                        <div class="choice-emoji">❓</div>
+                        <div class="choice-label">YOUR MOVE</div>
+                    </div>
+                    <div class="fight-announcer" id="fightAnnouncer">⚔️ FIGHT! ⚔️</div>
+                    <div class="choice-box computer-choice" id="computerChoiceDisplay">
+                        <div class="choice-emoji">❓</div>
+                        <div class="choice-label">CPU MOVE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action buttons -->
+            <div class="action-buttons">
+                <button class="choice-btn rock" id="rockBtn">
+                    <span class="btn-emoji">✊</span>
+                    <span class="btn-text">ROCK</span>
+                </button>
+                <button class="choice-btn paper" id="paperBtn">
+                    <span class="btn-emoji">✋</span>
+                    <span class="btn-text">PAPER</span>
+                </button>
+                <button class="choice-btn scissors" id="scissorsBtn">
+                    <span class="btn-emoji">✌️</span>
+                    <span class="btn-text">SCISSORS</span>
+                </button>
+            </div>
+            
+            <!-- Game controls -->
+            <div class="game-controls">
+                <button class="control-btn" id="resetTournamentBtn">🔄 RESET TOURNAMENT</button>
+                <button class="control-btn" id="newMatchBtn">⚡ NEW MATCH</button>
+            </div>
+            
+            <!-- Match history / taunts -->
+            <div class="history-panel">
+                <div class="history-header">📜 BATTLE LOG & TAUNTS 📜</div>
+                <div class="history-list" id="historyList">
+                    <div class="history-empty">✨ Make a move to start the tournament! ✨</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confetti library for tournament win celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+    <script src="script.js"></script>
+</body>
+</html>
